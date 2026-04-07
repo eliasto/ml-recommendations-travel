@@ -5,6 +5,8 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence
 
+HIDDEN_DIM = 256
+
 # ---------------------------------------------------------------------------
 # 1. Data preprocessing
 # ---------------------------------------------------------------------------
@@ -91,7 +93,7 @@ class TripGRU(nn.Module):
         self,
         vocab_sizes: dict,
         embed_dim: int = 32,
-        hidden_dim: int = 128,
+        hidden_dim: int = HIDDEN_DIM,
         num_layers: int = 1,
     ):
         super().__init__()
@@ -145,7 +147,7 @@ def train_model(
     epochs: int = 5,
     batch_size: int = 256,
     lr: float = 1e-3,
-    hidden_dim: int = 128,
+    hidden_dim: int = HIDDEN_DIM,
     embed_dim: int = 32,
 ):
     # NOTE: Tried MPS on Apple Silicon but val_top4 accuracy
