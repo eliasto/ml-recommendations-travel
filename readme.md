@@ -1,9 +1,20 @@
-# Machine Learning model for predicting Travel Destination
+# Machine Learning Model for predicting a next destination
 
-This project offers a ML model using data pipelines based on Booking's  Multi Destination Trip dataset to predict the next top 4 most likely destinations of a customer.
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Booking.com%20Multi--Destination%20Trips-yellow)](https://huggingface.co/datasets/Booking-com/multi-destination-trip-dataset)
 
-# Installation
+![Architecture](.github/model_architecture.png)
 
-This project uses `uv` as their dependency manager. Run `uv sync` first to sync all packages.
+This project provides a machine learning model built on data pipelines using the [Booking.com Multi-Destination Trip Dataset](https://huggingface.co/datasets/Booking-com/multi-destination-trip-dataset) to predict the four most likely next destinations for a customer.
 
-We use `black` for formatting.
+# Overview
+
+This project uses `uv` as their dependency manager.
+> Run `uv sync` first to sync all packages.
+
+It also uses `black` for formatting, which is runned before every commit with `pre-commit`.
+
+The project is divided in four main files:
+- `main.py`: Trains a new model
+- `inference.py`: Run the trained model on a random trip from the dataset
+- `notebook.ipynb`: Explains and dives a bit in the dataset
+- `report/report.pdf`: Report for this project
