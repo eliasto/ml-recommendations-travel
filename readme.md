@@ -4,4 +4,6 @@ This project offers a ML model using data pipelines based on Booking's  Multi De
 
 # Installation
 
-This project uses `uv` as their dependency manager.
+This project uses `uv` as their dependency manager. Run `uv sync` first to sync all packages.
+
+We use `black` for formatting.
