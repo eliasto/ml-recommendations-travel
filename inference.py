@@ -53,7 +53,7 @@ def load_model(path: str = "model.pt"):
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = TripGRU(vocab_sizes).to(device)
-    model.load_state_dict(checkpoint["model_state"])
+    model.load_state_dict(checkpoint["model_state"], strict=False)
     model.eval()
     return model, vocabs
 

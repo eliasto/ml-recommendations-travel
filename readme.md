@@ -9,6 +9,8 @@ This project is currently in progress. It is not ready yet and the model is very
 
 This project provides a machine learning model built on data pipelines using the [Booking.com Multi-Destination Trip Dataset](https://huggingface.co/datasets/Booking-com/multi-destination-trip-dataset) to predict the four most likely next destinations for a customer.
 
+![Gradio](.github/gradio.png)
+
 # Overview
 
 This project uses `uv` as their dependency manager.
