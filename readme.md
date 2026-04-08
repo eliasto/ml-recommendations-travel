@@ -21,5 +21,6 @@ It also uses `black` for formatting, which is runned before every commit with `p
 The project is divided in four main files:
 - `main.py`: Trains a new model
 - `inference.py`: Run the trained model on a random trip from the dataset
+- `app.py`: Gradio app to play with the model
 - `notebook.ipynb`: Explains and dives a bit in the dataset
 - `report/report.pdf`: Report for this project
