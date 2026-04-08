@@ -141,7 +141,8 @@ with gr.Blocks(title="TripGRU") as demo:
             gr.Markdown("# TripGRU - Prediction of the next destination")
             gr.Markdown(
                 "Build a trip step by step or load a random one from the dataset, "
-                "then predict the next destination."
+                "then predict the next destination. "
+                "[GitHub](https://github.com/eliasto/ml-recommendations-travel)"
             )
         random_btn = gr.Button("Random trip from dataset", variant="huggingface")
 
@@ -192,4 +193,4 @@ with gr.Blocks(title="TripGRU") as demo:
     predict_btn.click(run_prediction, outputs=[result])
 
 if __name__ == "__main__":
-    demo.launch(theme=gr.themes.Ocean())
+    demo.launch(theme=gr.themes.Ocean(), server_name="0.0.0.0")
