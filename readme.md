@@ -11,14 +11,30 @@ This project provides a machine learning model built on data pipelines using the
 
 ![Gradio](.github/gradio.png)
 
-# Overview
+# Quick start with Docker
 
-This project uses `uv` as their dependency manager.
-> Run `uv sync` first to sync all packages.
+```bash
+docker build -t tripgru .
+docker run -p 7860:7860 -v tripgru-data:/app/dataset tripgru
+```
 
-It also uses `black` for formatting, which is runned before every commit with `pre-commit`.
+On the first run, it downloads the dataset and trains the model (this can take a while). After that, the Gradio app is live at http://localhost:7860.
 
-The project is divided in four main files:
+# Local setup
+
+This project uses `uv` as its dependency manager.
+
+```bash
+uv sync
+python download.py
+python main.py
+python app.py
+```
+
+It also uses `black` for formatting, which runs before every commit with `pre-commit`.
+
+# Project structure
+
 - `main.py`: Trains a new model
 - `inference.py`: Run the trained model on a random trip from the dataset
 - `app.py`: Gradio app to play with the model
